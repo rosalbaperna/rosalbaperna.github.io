@@ -1,204 +1,580 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>  
-  <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-3">
-	<TITLE>Rosalba Perna</TITLE>
-	<META NAME="GENERATOR" CONTENT="LibreOffice 4.0.4.2 (Linux)">
-	<META NAME="CREATED" CONTENT="0;0">
-	<META NAME="CHANGEDBY" CONTENT="Rosalba Perna">
-	<META NAME="CHANGED" CONTENT="20140822;14182400">
-	<META NAME="CHANGEDBY" CONTENT="Rosalba Perna">
-	<META NAME="CHANGEDBY" CONTENT="PERNA Rosalba">
-	<META NAME="CHANGEDBY" CONTENT="PERNA Rosalba">
-	<META NAME="CHANGEDBY" CONTENT="PERNA Rosalba">
-	<META NAME="CHANGEDBY" CONTENT="PERNA Rosalba">
-	<META NAME="CHANGEDBY" CONTENT="PERNA Rosalba">
-	<META NAME="CHANGEDBY" CONTENT="PERNA Rosalba">
-	<META NAME="CHANGEDBY" CONTENT="PERNA Rosalba">
-	<META NAME="CHANGEDBY" CONTENT="PERNA Rosalba">
-	<STYLE TYPE="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<HEAD>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosalba Perna — Theoretical Astrophysicist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #04060f;
+      --surface: #080c1a;
+      --surface2: #0d1225;
+      --accent: #93cce3;
+      --accent2: #d4b8ff;
+      --gold: #e8bf6a;
+      --text: #e8f2fa;
+      --muted: #9db4c8;
+      --border: rgba(147, 204, 227, 0.25);
+      --glow: rgba(147, 204, 227, 0.06);
+      --focus: #ffdf00;
+    }
 
-body {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-h2, h4 {
-  color: #ffffff;
-}
+    html { scroll-behavior: smooth; }
 
-a {
-  color: #4dd0e1;
-}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
 
-a:hover {
-  color: #80deea;
-}
-	  
-	<!--
-		P { color: #ffffff}
-		TD P { color: #DCDCDC }
-		H2 { color: #ffffff }
-		H2.western { font-family: "Albany", sans-serif; font-size: 14pt; font-style: italic }
-		H2.cjk { font-family: "HG Mincho Light J"; font-size: 14pt; font-style: italic }
-		H2.ctl { font-family: "Arial Unicode MS"; font-size: 14pt; font-style: italic }
-		H4 { color: #ffffff }
-		H4.western { font-family: "Albany", sans-serif; font-size: 11pt; font-style: italic }
-		H4.cjk { font-family: "HG Mincho Light J"; font-size: 11pt; font-style: italic }
-		H4.ctl { font-family: "Arial Unicode MS"; font-size: 11pt; font-style: italic }
-		A:link { color: #33ffff }
-		A:visited { color: #33ffff }
+    /* SKIP LINK */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--focus);
+      color: #000;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      z-index: 9999;
+      font-size: 0.9rem;
+    }
+    .skip-link:focus { top: 1rem; }
 
-	-->
-	</STYLE>
+    /* GLOBAL FOCUS */
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+    #stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    #stars::before, #stars::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 25%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 40%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 20% 85%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 60% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 45%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 20%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 5% 50%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 95% 90%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 55% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 35%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 55%, rgba(255,255,255,0.4) 0%, transparent 100%);
+    }
+    #stars::after {
+      transform: translate(200px, 100px);
+      opacity: 0.5;
+    }
+
+    .nebula {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 80% 20%, rgba(90, 40, 140, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 10% 80%, rgba(20, 60, 120, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 30% at 50% 50%, rgba(10, 20, 60, 0.3) 0%, transparent 70%);
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* HEADER */
+    header {
+      position: relative;
+      padding: 3.5rem 0 1.5rem;
+      animation: fadeUp 1s ease both;
+    }
+
+    .header-inner {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .photo-frame {
+      position: relative;
+      flex-shrink: 0;
+    }
+    .photo-frame img {
+      display: block;
+      width: 200px;
+      height: 200px;
+      border-radius: 16px;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+      border: 2px solid var(--border);
+    }
+    .photo-placeholder {
+      width: 200px;
+      height: 200px;
+      border-radius: 16px;
+      background: var(--surface2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      position: relative;
+      z-index: 1;
+      border: 3px solid var(--bg);
+    }
+
+    .header-text h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+      margin-bottom: 0.4rem;
+    }
+    .header-text h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .header-text .title {
+      margin-bottom: 1.4rem;
+      line-height: 1.4;
+    }
+    .header-text .title .role {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+    .header-text .title .institution {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+
+    .header-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--accent);
+      text-decoration: none;
+      background: var(--glow);
+      transition: all 0.25s;
+      letter-spacing: 0.05em;
+    }
+    .pill-link:hover {
+      background: rgba(126, 184, 212, 0.12);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent) 40%, var(--accent2) 60%, transparent);
+      opacity: 0.25;
+      margin: 0.5rem 0;
+    }
+
+    section {
+      padding: 1.4rem 0;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+    }
+    .section-label h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 300;
+      font-style: italic;
+      color: #fff;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .section-label .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+    }
+
+    /* RESEARCH GRID */
+    .research-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .research-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem 1.6rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .research-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--card-accent, var(--accent));
+      opacity: 0.7;
+    }
+    .research-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(126, 184, 212, 0.3);
+    }
+
+    .card-he { --card-accent: #7eb8d4; }
+    .card-cosmo { --card-accent: #c5a3ff; }
+    .card-exo { --card-accent: #d4a853; }
+    .card-nbody { --card-accent: #7dd8a0; }
+
+    .card-tag {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.8rem;
+      background: rgba(255,255,255,0.05);
+      color: var(--card-accent, var(--accent));
+      border: 1px solid var(--card-accent, var(--accent));
+      opacity: 0.85;
+    }
+
+    .research-card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* TEACHING */
+    .teaching-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .teaching-item {
+      flex: 1;
+      min-width: 220px;
+      padding: 1.2rem 1.6rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.25s;
+      display: block;
+    }
+    .teaching-item:hover {
+      border-color: var(--accent);
+      background: rgba(126, 184, 212, 0.06);
+      transform: translateY(-2px);
+    }
+    .teaching-item .inst {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--accent);
+      margin-bottom: 0.2rem;
+    }
+    .teaching-item .years {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* PEOPLE */
+    .people-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.6rem;
+    }
+    .people-block h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+    .people-block p {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .people-block a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+    .people-block a:hover { text-decoration: underline; }
+
+    /* BEYOND */
+    .hobbies-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.6rem;
+    }
+    .hobby-tag {
+      padding: 0.3rem 0.9rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .photo-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.8rem;
+    }
+    .photo-link {
+      padding: 0.9rem 1.1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--gold);
+      font-size: 0.85rem;
+      transition: all 0.25s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .photo-link:hover {
+      background: rgba(212, 168, 83, 0.08);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .photo-link .icon { opacity: 0.7; font-size: 1rem; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0 3rem;
+      margin-top: 1rem;
+    }
+    footer p {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+    section:nth-child(5) { animation-delay: 0.4s; }
+    section:nth-child(6) { animation-delay: 0.5s; }
+
+    @media (max-width: 620px) {
+      .header-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+      .header-links { justify-content: center; }
+      .photo-frame img, .photo-placeholder { width: 150px; height: 150px; }
+      .people-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </HEAD>
-<BODY LANG="en-US" TEXT="#ffffff" LINK="#00ffff" VLINK="#000000"  BGCOLOR="#000000" DIR="LTR">
-<P ALIGN=CENTER STYLE="margin-bottom: -0.2in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<FONT SIZE=6>Rosalba Perna</FONT></P>
-<TABLE WIDTH=950 CELLPADDING=1 CELLSPACING=1>
-	<TR>
-		<TD STYLE="border: none; padding: 0.in">
-			<P><IMG SRC="Rosalba2022.jpg" NAME="graphics1" ALIGN=TOP WIDTH=280 HEIGHT=280 BORDER=0></P>
-		</TD>
-		<TD STYLE="border: none; padding: 0.in">
-			<P ALIGN=CENTER><FONT SIZE=5>Professor
-			    of Physics and Astronomy</FONT></P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT SIZE=4>Stony
-			Brook University&nbsp;</FONT></P>
-			<P ALIGN=CENTER><BR>
-			</P>
-			<P ALIGN=CENTER>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<FONT SIZE=4>CV :</FONT> <A HREF="cv.pdf"><FONT SIZE=4>cv.pdf</FONT></A>
-						</P>
-<P ALIGN=CENTER>&nbsp;<FONT SIZE=4>PUBLICATIONS: <A HREF="
-https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=database%3A%20(astronomy%20OR%20physics)&p_=0&q=-docs(8072c2cdb14975f994f7d0d4d4ddbc14)%20-docs(7988a24519d7529cb4d9778b169cf193)%20-docs(7370d733dd3df58826148f72094efff1)%20-docs(df8c295b3018c680066fd6942a482e05)%20-docs(2279a4f06b4134909fc1e13eff394d96)%20author%3A(%22perna%2C%20rosalba%22)&sort=date%20desc%2C%20bibcode%20desc
-"
+<body>
 
-							       >in ADS
-			</A></FONT> 
-			</P>
-<P ALIGN=CENTER>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			  <A HREF="https://scholar.google.com/citations?hl=en&user=96iYoq4AAAAJ&view_op=list_works&authuser=1&gmla=AJsN-F6x1JRHGt57-w-FRxezdr3BtK2Kzh7c_vYKSRGHHXBlHXMOibx3LjH6uTwF2UzUgEP1aLSbsnMEFF9gOHQ_oVR0wYImyd1QjMxWFzJn2BjNvzDZ37I"
-			     >
-			    <FONT SIZE=4>in Google Scholar
-			</FONT></A></P>
-		</TD>
-	</TR>
-</TABLE>
-<HR>
-<H2 CLASS="western"><FONT SIZE=5>Research: Theoretical Astrophysics</FONT></H2>
-<P><FONT COLOR="#33ccff"><FONT SIZE=3><B>HIGH ENERGY</B></FONT></FONT>-
-&nbsp; research topics include: 
-</P>
-<UL>
-	<P><FONT SIZE=4>
- Gamma-ray bursts, neutron stars with special focus on magnetars, accretion disks, X-ray binaries,
-ultra-luminous X-ray sources, mergers of binary compact objects, gravitational waves
-and their electromagnetic counterparts, tidal disruption events. </FONT>
-	</P>
-</UL>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-<P><FONT COLOR="#33ccff"><FONT SIZE=3><B>COSMOLOGY</B></FONT></FONT>
-- &nbsp; research topics include: 
-</P>
-<UL>
-	<P><FONT SIZE=4>
-Gravitational lensing, interstellar medium and dust in high-redshift galaxies,
-foregrounds for CMB and 21 cm measurements, growth of supermassive black holes, axions.
- </FONT> 
-	</P>
-</UL>
+<div id="stars" aria-hidden="true"></div>
+<div class="nebula" aria-hidden="true"></div>
 
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#33ccff"><FONT SIZE=3><B>EXOPLANETS</B></FONT></FONT>
-- &nbsp; research topics include: 
-</P>
-<UL>
-        <P><FONT SIZE=4>
-Magnetohydrodynamics and turbulence in the atmospheres of hot Jupiters. Dynamical effects
-from stellar encounters on planetary systems.
- </FONT>
-        </P>
-</UL>
+<div class="wrapper">
 
-<P STYLE="margin-bottom: 0in"><FONT COLOR="#33ccff"><FONT SIZE=3><B>N-BODY DYNAMICS</B></FONT></FONT>
-- &nbsp; research topics include:
-</P>
-<UL>
-        <P><FONT SIZE=4>
-Scattering in the small-N regime with applications ranging from
-supermassive black hole dynamics in galactic centers, to production 
-of hypervelocity stars, to binary compact object formation, to
-exoplanetary architectures in dense star clusters.
- </FONT>
-        </P>
-</UL>
-<UL>
-</UL>
+  <header role="banner">
+    <div class="header-inner">
+      <div class="photo-frame">
+        <img src="Rosalba2022.jpg" alt="Rosalba Perna" onerror="this.parentElement.innerHTML='<div class=&quot;photo-placeholder&quot;>🔭</div>'">
+      </div>
+      <div class="header-text">
+        <h1>Rosalba Perna</h1>
+        <p class="title">
+          <span class="role">Professor of Physics &amp; Astronomy</span>
+          <span class="institution">Stony Brook University</span>
+        </p>
+        <div class="header-links">
+          <a href="cv.pdf" class="pill-link">↓ Curriculum Vitae</a>
+          <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=database%3A%20(astronomy%20OR%20physics)&p_=0&q=-docs(8072c2cdb14975f994f7d0d4d4ddbc14)%20-docs(7988a24519d7529cb4d9778b169cf193)%20-docs(7370d733dd3df58826148f72094efff1)%20-docs(df8c295b3018c680066fd6942a482e05)%20-docs(2279a4f06b4134909fc1e13eff394d96)%20author%3A(%22perna%2C%20rosalba%22)&sort=date%20desc%2C%20bibcode%20desc" class="pill-link" target="_blank" rel="noopener noreferrer" aria-label="Publications on ADS (opens in new tab)">Publications (ADS)</a>
+          <a href="https://scholar.google.com/citations?hl=en&user=96iYoq4AAAAJ&view_op=list_works&authuser=1" class="pill-link" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile (opens in new tab)">Google Scholar</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<HR>
+  <div class="divider" aria-hidden="true"></div>
 
+  <main id="main-content">
 
-<h2 class="western">
-  <FONT SIZE=5>
-  <strong>Teaching:</strong> </FONT> &nbsp;&nbsp;
-  <a href="teaching-sbu.html">Stony Brook University (2014 - present)</a> &nbsp;&nbsp; -
-  &nbsp;&nbsp;  <a href="teaching-cu.html">Colorado University, Boulder (2004 - 2013) </a>
-</h2>
+  <section aria-labelledby="research-heading">
+    <div class="section-label">
+      <h2 id="research-heading">Research: <span style="font-style:normal;font-size:1.4rem;color:var(--muted);font-weight:300;">Theoretical Astrophysics</span></h2>
+      <div class="line"></div>
+    </div>
+    <div class="research-grid">
+      <div class="research-card card-he">
+        <span class="card-tag">High Energy</span>
+        <p>Gamma-ray bursts, neutron stars &amp; magnetars, accretion disks, X-ray binaries, ultra-luminous X-ray sources, binary compact object mergers, gravitational waves &amp; electromagnetic counterparts, tidal disruption events.</p>
+      </div>
+      <div class="research-card card-cosmo">
+        <span class="card-tag">Cosmology</span>
+        <p>Gravitational lensing, interstellar medium &amp; dust in high-redshift galaxies, foregrounds for CMB and 21 cm measurements, growth of supermassive black holes, axions.</p>
+      </div>
+      <div class="research-card card-exo">
+        <span class="card-tag">Exoplanets</span>
+        <p>Magnetohydrodynamics and turbulence in the atmospheres of hot Jupiters. Dynamical effects from stellar encounters on planetary systems.</p>
+      </div>
+      <div class="research-card card-nbody">
+        <span class="card-tag">N-Body Dynamics</span>
+        <p>Scattering in the small-N regime: supermassive black hole dynamics in galactic centers, hypervelocity star production, binary compact object formation, exoplanetary architectures in dense star clusters.</p>
+      </div>
+    </div>
+  </section>
 
-	<HR>
+  <div class="divider" aria-hidden="true"></div>
 
-	<H2 CLASS="western">Postdocs:</H2>
-<FONT COLOR="#ffffff"><FONT SIZE=3>Nathan Leigh
-        (01/2018 – 12/2018); Simone Dall'Osso (05/2016 – 02/2018); 
-	Takamitsu Tanaka (09/2014 – 08/2016);
-	 Bruno Giacomazzo (10/2011 - 09/2013);
-Matthew Van Adelsberg (09/2006 - 08/2008) </FONT></FONT>	
-	
-  
+  <section aria-labelledby="teaching-heading">
+    <div class="section-label">
+      <h2 id="teaching-heading">Teaching</h2>
+      <div class="line"></div>
+    </div>
+    <div class="teaching-row">
+      <a href="teaching-sbu.html" class="teaching-item">
+        <div class="inst">Stony Brook University</div>
+        <div class="years">2014 — present</div>
+      </a>
+      <a href="teaching-cu.html" class="teaching-item">
+        <div class="inst">University of Colorado, Boulder</div>
+        <div class="years">2004 — 2013</div>
+      </a>
+    </div>
+  </section>
 
-<h2 class="western">
-  Students:
-  <span style="font-size: 0.75em;">
-    &nbsp;<a href="students.html">These</a>&nbsp; are students
-    who have been recently (or currently are) involved in research
-    projects with me.
-  </span>
-</h2>
-  
+  <div class="divider" aria-hidden="true"></div>
 
-<HR>
-<HR>
+  <section aria-labelledby="group-heading">
+    <div class="section-label">
+      <h2 id="group-heading">Research Group</h2>
+      <div class="line"></div>
+    </div>
+    <div class="people-grid" style="display:grid;gap:1rem;grid-template-columns:1fr 1fr;">
+      <div class="people-block">
+        <h3>Postdoctoral Researchers</h3>
+        <p>Nathan Leigh (01/2018–12/2018) &nbsp;·&nbsp; Simone Dall'Osso (05/2016–02/2018) &nbsp;·&nbsp; Takamitsu Tanaka (09/2014–08/2016) &nbsp;·&nbsp; Bruno Giacomazzo (10/2011–09/2013) &nbsp;·&nbsp; Matthew Van Adelsberg (09/2006–08/2008)</p>
+      </div>
+      <div class="people-block">
+        <h3>Graduate Students</h3>
+        <p>See <a href="students.html">the full list</a> of students currently and recently involved in research projects.</p>
+      </div>
+    </div>
+  </section>
 
-	<H2 CLASS="western"> <FONT SIZE=5>Beyond Astrophysics </FONT></H2>
-	<FONT COLOR="#33ccff"><FONT SIZE=4><B>Hobbies</B></FONT></FONT><FONT SIZE=4><B>:</B>
-	  Dance, Piano Playing, Travel, Photography, Cycling, Running. </FONT>
+  <div class="divider" aria-hidden="true"></div>
 
-	<BR>
+  <section aria-labelledby="beyond-heading">
+    <div class="section-label">
+      <h2 id="beyond-heading">Beyond Astrophysics</h2>
+      <div class="line"></div>
+    </div>
+    <p style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-bottom:0.8rem;">Hobbies</p>
+    <div class="hobbies-row">
+      <span class="hobby-tag">💃 Dance</span>
+      <span class="hobby-tag">🎹 Piano</span>
+      <span class="hobby-tag">✈️ Travel</span>
+      <span class="hobby-tag">📷 Photography</span>
+      <span class="hobby-tag">🚴 Cycling</span>
+      <span class="hobby-tag">🏃 Running</span>
+    </div>
+    <p style="font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin-bottom:0.8rem;">Photography</p>
+    <div class="photo-links">
+      <a href="travel/travel_index.html" class="photo-link"><span class="icon">🌍</span> World Travel</a>
+      <a href="italy/italy.html" class="photo-link"><span class="icon">🇮🇹</span> Italy</a>
+      <a href="newyork/index.html" class="photo-link"><span class="icon">🗽</span> New York</a>
+      <a href="boulder/index.html" class="photo-link"><span class="icon">🏔️</span> Boulder</a>
+      <a href="bike/bike.html" class="photo-link"><span class="icon">🚵</span> Bicycle Trips</a>
+    </div>
+  </section>
 
-	<FONT COLOR="#c0392b"><FONT SIZE=4><B>PHOTOGRAPHY:</B></FONT></FONT>&nbsp;
-	 &nbsp;&nbsp;<FONT SIZE=4><A HREF="travel/travel_index.html"> 
-        World Travel</A> &nbsp;&nbsp;<FONT SIZE=6><B>-</B></FONT> &nbsp;&nbsp;
-	<A HREF="italy/italy.html"><FONT SIZE=4>Italy</FONT></A> &nbsp;&nbsp;
-	<FONT SIZE=5><B>-</B></FONT> &nbsp; <FONT SIZE=4><A HREF="newyork/index.html">New York</A>
-	&nbsp;&nbsp;
-<FONT SIZE=6><B>-</B></FONT> &nbsp;&nbsp;<FONT SIZE=4><A HREF="boulder/index.html">Boulder
-	and surroundings</A> 
-</FONT>
+  </main>
 
-	<FONT SIZE=5><B>-</B></FONT> &nbsp; <FONT SIZE=4><A HREF="bike/bike.html">Bicycle Trips</A>
-	&nbsp;&nbsp;
- </FONT>
-	</P>
-	<HR>
-	<H4 CLASS="western"><FONT SIZE=4>E-mail:&nbsp;
-	rosalba.perna&quot;at&quot;stonybrook.edu</FONT></H4>
-	<P>&nbsp; 
-	</P>
-	<P>&nbsp; <FONT SIZE=4><BR>&nbsp; <BR>&nbsp; <BR>&nbsp; <BR>&nbsp;
-	<BR>&nbsp; <BR>&nbsp; </FONT>
-	</P>
-</UL>
-</BODY>
-</HTML>
+  <div class="divider" aria-hidden="true"></div>
+
+  <footer role="contentinfo">
+    <p>✉ <a href="/cdn-cgi/l/email-protection#c7b5a8b4a6aba5a6e9b7a2b5a9a687b4b3a8a9bea5b5a8a8ace9a2a3b2"><span class="__cf_ema
